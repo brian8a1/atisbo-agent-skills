@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "senso": {
+      "type": "http",
+      "url": "https://app.getsenso.xyz/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${SENSO_MCP_KEY}"
+      }
+    }
+  }
+}

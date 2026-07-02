@@ -1,0 +1,15 @@
+{
+  "name": "senso",
+  "owner": {
+    "name": "Senso",
+    "url": "https://www.getsenso.xyz"
+  },
+  "description": "Senso — the backlog that writes itself. Agents pull work from it and report back.",
+  "plugins": [
+    {
+      "name": "senso",
+      "source": "./",
+      "description": "Take the next prioritized backlog item, report progress, hand work back for human review."
+    }
+  ]
+}
