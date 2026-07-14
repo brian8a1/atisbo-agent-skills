@@ -78,7 +78,7 @@ The agent continues using its own repository, design, GitHub, testing, and deliv
 ## Claude Code
 
 ```text
-/plugin marketplace add brian8a1/senso-claude-plugin
+/plugin marketplace add brian8a1/senso-agent-skills
 /plugin install senso@senso
 ```
 
