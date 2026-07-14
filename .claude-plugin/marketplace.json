@@ -4,12 +4,12 @@
     "name": "Senso",
     "url": "https://www.getsenso.xyz"
   },
-  "description": "Senso — the backlog that writes itself. Agents pull work from it and report back.",
+  "description": "Use Senso from the product, design, and engineering interactions your team already has.",
   "plugins": [
     {
       "name": "senso",
       "source": "./",
-      "description": "Take the next prioritized backlog item, report progress, hand work back for human review."
+      "description": "Bring Signals into Senso, review Opportunities, brief Backlog work, hand off artifacts, and record Outcomes."
     }
   ]
 }

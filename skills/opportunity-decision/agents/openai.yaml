@@ -1,0 +1,13 @@
+interface:
+  display_name: "Senso Opportunity Decision"
+  short_description: "Decide what to do about an Opportunity"
+  default_prompt: "Use $opportunity-decision to help me decide what to do about this Senso Opportunity."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "senso"
+      description: "Senso Signals, Opportunities, Backlog, Decisions, and Outcomes"
+      transport: "streamable_http"
+      url: "https://app.getsenso.xyz/api/mcp"
+policy:
+  allow_implicit_invocation: true

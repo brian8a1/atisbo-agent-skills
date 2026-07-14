@@ -1,0 +1,13 @@
+interface:
+  display_name: "Senso Signal Intake"
+  short_description: "Bring research and evidence into Signals"
+  default_prompt: "Use $signal-intake to add this source to Senso with its provenance intact."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "senso"
+      description: "Senso Signals, Opportunities, Backlog, Decisions, and Outcomes"
+      transport: "streamable_http"
+      url: "https://app.getsenso.xyz/api/mcp"
+policy:
+  allow_implicit_invocation: true

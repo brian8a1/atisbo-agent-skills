@@ -1,11 +1,11 @@
 {
   "name": "senso",
-  "description": "Work directly from your Senso backlog: take the next prioritized item, report progress to its thread, and hand work back for human review.",
-  "version": "0.1.0",
+  "description": "Use Senso Signals, Opportunities, Backlog, Decisions, and Outcomes from existing product, design, and engineering work.",
+  "version": "0.3.0",
   "author": {
     "name": "Senso",
     "url": "https://www.getsenso.xyz"
   },
   "homepage": "https://www.getsenso.xyz",
-  "keywords": ["backlog", "product", "agent-workflow", "mcp"]
+  "keywords": ["signals", "backlog", "product", "agent-skills", "mcp"]
 }

@@ -1,0 +1,13 @@
+interface:
+  display_name: "Senso Handoff"
+  short_description: "Hand a design or PR to human review"
+  default_prompt: "Use $handoff to connect this completed artifact to its Senso Backlog item and hand it to review."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "senso"
+      description: "Senso Signals, Opportunities, Backlog, Decisions, and Outcomes"
+      transport: "streamable_http"
+      url: "https://app.getsenso.xyz/api/mcp"
+policy:
+  allow_implicit_invocation: true

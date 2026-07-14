@@ -1,62 +1,137 @@
-# Senso plugin for Claude Code
+# Senso skills for agents
 
-Work directly from your [Senso](https://www.getsenso.xyz) backlog without leaving the terminal. Senso writes and maintains the backlog from customer evidence; this plugin lets your coding agent pull work from it and report back.
+Use Senso from the product, design, and engineering interactions your team already has. The skills do not teach an agent how to plan or write code; they teach it how to bring the right Senso context into existing work and how to return evidence, Decisions, handoffs, and Outcomes to the shared product record.
 
-## What you get
+## Product language
 
-| Skill | What it does |
-|-------|--------------|
-| `/senso:next` | Takes the next prioritized item (honors the PM's manual order), claims it, creates a `sen-{n}-slug` branch, loads the problem + evidence, and starts implementing |
-| `/senso:report` | Posts a progress update or blocker to the item's conversation thread — visible to the whole team |
-| `/senso:done` | Runs checks, opens the PR with `SEN-{n}` in the title, reports the handoff. Merging the PR auto-moves the item to **In Review** |
+- **Signals** are source evidence: feedback, interviews, observations, incidents, and metrics.
+- **Opportunities** are recurring customer problems formed from related Signals.
+- **Solutions** record the response chosen for an Opportunity.
+- **Backlog** holds Solutions, Groups, Knowledge, and Living Documents.
+- **Decisions** preserve what changed, who decided, alternatives, and reasoning.
+- **In Review** means an artifact is waiting for human approval.
+- **Outcome** records observed post-launch learning. A PR, design, merge, or deployment is output—not outcome.
 
-The full loop: evidence → item is born in Senso → `/senso:next` → PR → merge → **In Review**, waiting for human approval. Every automatic move is recorded.
+## Skills
 
-## Install
+| Skill | Existing interaction | Result in Senso |
+|---|---|---|
+| `signal-intake` | Add interview notes, feedback, an incident, metric, or document | Signal, Knowledge, or Living Document evidence |
+| `signal-review` | Review evidence already captured | Correct classification and Opportunity grouping |
+| `product-review` | Prepare a weekly, roadmap, or backlog review | Read-only agenda with decisions and owner questions |
+| `opportunity-decision` | Decide what to do about one Opportunity | Confirmed Decision and optional Solution in Backlog |
+| `backlog-brief` | Begin work on a SEN item, design, issue, or branch | Role-adapted context from its Living Document and evidence |
+| `handoff` | Return a design or PR for review | Artifact summary on the Solution thread and In Review state |
+| `outcome` | Review a launched Solution after observation | Success, partial, miss, or unexpected Outcome |
 
-1. Get an MCP key in Senso: **Settings → MCP keys**.
-2. Export it in your shell profile:
-   ```bash
-   export SENSO_MCP_KEY="sk_..."
-   ```
-3. Install the plugin:
-   ```
-   /plugin marketplace add brian8a1/senso-claude-plugin
-   /plugin install senso@senso
-   ```
-   (Or for local testing: `claude --plugin-dir ./claude-plugin`.)
-4. Optional but recommended: connect the **GitHub integration** in Senso (Settings → Sources) so merged PRs referencing `SEN-{n}` move items to In Review automatically.
+These are independent entry points, not a mandatory pipeline.
 
-## Conventions
+## Which skills each role uses
 
-- Branch names: `sen-{n}-short-slug`
-- Commit messages and PR titles mention `SEN-{n}`
-- Agents only take items from the **active** queue (a human decides what becomes active) and never take work assigned to a person
+### Product manager
 
-## Using Codex (or any other agent) instead
+- `signal-intake` for new feedback, interviews, or metrics.
+- `signal-review` for evidence that needs classification or regrouping.
+- `product-review` before weekly, roadmap, and portfolio reviews.
+- `opportunity-decision` when choosing a response and recording why.
+- `backlog-brief` before continuing one Solution.
+- `outcome` after a Done Solution has enough evidence.
 
-Codex has no plugin system — add the MCP server and paste the workflow into `AGENTS.md`:
+### Designer
 
-```toml
-# ~/.codex/config.toml
-[mcp_servers.senso]
-url = "https://app.getsenso.xyz/api/mcp"
-http_headers = { "Authorization" = "Bearer YOUR_SENSO_MCP_KEY" }
+- `signal-intake` after research or usability sessions.
+- `opportunity-decision` when a design choice changes the product response.
+- `backlog-brief` before opening the design task or artifact.
+- `handoff` when the artifact is ready for product review.
+- `outcome` when qualitative research contributes post-launch evidence.
+
+### Engineer
+
+- `signal-intake` for incidents, bugs, logs, and production findings.
+- `backlog-brief` before working from an issue, branch, or SEN item.
+- `handoff` when a PR and its checks are ready for human review.
+- `outcome` when technical or product metrics show what happened after launch.
+
+## MCP relationship
+
+The skills use Senso's six compact MCP tools instead of inventing new product capabilities:
+
+| MCP tool | Responsibility |
+|---|---|
+| `senso_orient` | Workspace snapshot, changes, strategy, and integration health |
+| `senso_lookup` | Signals, Opportunities, Solutions, Backlog, Groups, Knowledge, and Living Documents |
+| `senso_capture` | New Signals, Knowledge, document updates, and evidence blocks |
+| `senso_decide` | Signal corrections, Solutions, Decisions, state, ownership, and Outcomes |
+| `senso_map` | Groups, nodes, anchors, edges, and metrics |
+| `senso_analyze` | Portfolio and time-window analysis |
+
+The agent continues using its own repository, design, GitHub, testing, and delivery tools.
+
+## Shared setup
+
+1. In Senso, open **Connect agents** from the sidebar.
+2. Install the skills in the repository or workspace where the agent runs.
+3. Generate a workspace MCP URL on the same page.
+4. Add the URL as a Streamable HTTP MCP server named `senso`.
+5. Keep the URL secret; it contains a revocable workspace key.
+
+## Claude Code
+
+```text
+/plugin marketplace add brian8a1/senso-claude-plugin
+/plugin install senso@senso
 ```
 
-```markdown
-<!-- AGENTS.md -->
-## Senso backlog workflow
-- To pick work: call senso_work_queue (state "active", sort_by "priority", limit 5).
-  Take the first item not assigned to a person or another agent. Claim it with
-  senso_solution_update { assign_to_agent: true, agent_name: "Codex", comment: "<plan>" }.
-- Branch: sen-{n}-slug. Commits and PR title must mention SEN-{n}.
-- Progress/blockers: senso_solution_update { agent_name: "Codex", comment: "<update>" }.
-- Finish: open the PR with SEN-{n} in the title. Merging it moves the item to In Review
-  automatically (GitHub integration). Without the integration, also pass
-  lifecycle: "IN_REVIEW" in the final update.
+Type `/senso:` to discover the interactions, for example:
+
+```text
+/senso:product-review
+/senso:backlog-brief SEN-18
+/senso:handoff SEN-18
 ```
 
-## Publishing note (maintainers)
+For local development, start Claude Code with `--plugin-dir ./claude-plugin`.
 
-This folder is the source of truth; it is mirrored to the public repo `brian8a1/senso-claude-plugin` (marketplace root). After changing anything here, re-sync the public repo. `.claude-plugin/marketplace.json` points at `./`, so `/plugin marketplace add brian8a1/senso-claude-plugin` works as-is.
+## Codex
+
+Install the canonical skills into `.agents/skills/`:
+
+```bash
+node claude-plugin/scripts/install-agent-skills.mjs --client codex --target /path/to/repo
+```
+
+Invoke a skill explicitly, for example `$product-review`, `$backlog-brief`, or `$handoff`, or ask naturally for the same interaction.
+
+## Cursor
+
+Install the skills into `.cursor/skills/`:
+
+```bash
+node claude-plugin/scripts/install-agent-skills.mjs --client cursor --target /path/to/repo
+```
+
+Select `signal-intake`, `backlog-brief`, `handoff`, or another Senso interaction from the slash menu.
+
+## Other agents
+
+Choose the exact directory the client discovers:
+
+```bash
+node claude-plugin/scripts/install-agent-skills.mjs --skills-dir .agent/skills --target /path/to/repo
+```
+
+Any MCP-compatible client can use Senso's tools even when it does not support Agent Skills.
+
+## Behavioral contract
+
+- Respect manual Backlog order and Senso's evidence-weighted priority. Legacy RICE fields never rank work.
+- Never take work owned by someone else without explicit authorization.
+- Preserve source provenance and contradictory evidence.
+- Keep exploration read-only until the user requests or confirms a write.
+- Never claim Senso validates code, tests, accessibility, security, or design quality.
+- Move an artifact to In Review only when it is ready for human approval.
+- Record an Outcome only from observed post-launch evidence.
+
+## Publishing note
+
+This folder is the cross-agent source of truth and is mirrored to the public plugin repository. Keep the Claude and Codex manifests on the same version when publishing.
