@@ -20,7 +20,6 @@ Use Senso from the product, design, and engineering interactions your team alrea
 | `signal-review` | Review evidence already captured | Correct classification and Opportunity grouping |
 | `product-review` | Prepare a weekly, roadmap, or backlog review | Read-only agenda with decisions and owner questions |
 | `opportunity-decision` | Decide what to do about one Opportunity | Confirmed Decision and optional Solution in Backlog |
-| `solution-bundling` | Suspect several Opportunities are one problem | One Solution covering several Opportunities, or a clear no |
 | `backlog-brief` | Begin work on a SEN item, design, issue, or branch | Role-adapted context from its Living Document and evidence |
 | `agent-dispatch` | Give implementation work to a coding agent | Dispatched items with briefs, plus what still needs the human |
 | `handoff` | Return a design or PR for review | Artifact summary on the Solution thread and In Review state |
@@ -36,7 +35,6 @@ These are independent entry points, not a mandatory pipeline.
 - `signal-review` for evidence that needs classification or regrouping.
 - `product-review` before weekly, roadmap, and portfolio reviews.
 - `opportunity-decision` when choosing a response and recording why.
-- `solution-bundling` when separate Opportunities look like one problem.
 - `backlog-brief` before continuing one Solution.
 - `agent-dispatch` to hand ready work to a coding agent and keep the rest.
 - `outcome` after a Done Solution has enough evidence.
