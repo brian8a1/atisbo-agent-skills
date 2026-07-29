@@ -1,13 +1,13 @@
 interface:
-  display_name: "Senso Product Review"
+  display_name: "Atisbo Product Review"
   short_description: "Prepare weekly and roadmap reviews"
-  default_prompt: "Use $product-review to prepare my product review from what changed in Senso."
+  default_prompt: "Use $product-review to prepare my product review from what changed in Atisbo."
 dependencies:
   tools:
     - type: "mcp"
       value: "senso"
-      description: "Senso Signals, Opportunities, Backlog, Decisions, and Outcomes"
+      description: "Atisbo Signals, Opportunities, Backlog, Decisions, and Outcomes"
       transport: "streamable_http"
-      url: "https://app.getsenso.xyz/api/mcp"
+      url: "https://app.atisbo.dev/api/mcp"
 policy:
   allow_implicit_invocation: true

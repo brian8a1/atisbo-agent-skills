@@ -1,11 +1,11 @@
 ---
 name: product-review
-description: Prepare a recurring product, weekly, roadmap, or backlog review from the current Senso workspace. Use when a product manager or product leader needs what changed, growing Opportunities, blocked Decisions, unowned or stalled Backlog work, new contradictions, integration health, or launched Solutions awaiting an Outcome.
+description: Prepare a recurring product, weekly, roadmap, or backlog review from the current Atisbo workspace. Use when a product manager or product leader needs what changed, growing Opportunities, blocked Decisions, unowned or stalled Backlog work, new contradictions, integration health, or launched Solutions awaiting an Outcome.
 ---
 
 # Prepare a product review
 
-Produce a workspace-level review agenda from Senso. Default to read-only; a review informs decisions but does not make them automatically.
+Produce a workspace-level review agenda from Atisbo. Default to read-only; a review informs decisions but does not make them automatically.
 
 ## Procedure
 
@@ -18,15 +18,15 @@ Produce a workspace-level review agenda from Senso. Default to read-only; a revi
    - Backlog work that is blocked, unowned, stale, or In Review;
    - contradictions or strategic misalignment;
    - Done items awaiting measurement or showing new evidence.
-5. For every recommendation, cite the Senso entity or aggregate that supports it. Separate facts, interpretations, and proposed decisions.
+5. For every recommendation, cite the Atisbo entity or aggregate that supports it. Separate facts, interpretations, and proposed decisions.
 
 ## Guardrails
 
-- Respect the Backlog order returned by Senso. Do not reconstruct ranking with RICE.
+- Respect the Backlog order returned by Atisbo. Do not reconstruct ranking with RICE.
 - Do not mutate priority, state, ownership, or strategy while preparing the review.
 - Do not state that "nothing changed" from an incomplete page; follow cursors when the requested scope requires it.
 - Move a specific choice to Opportunity Decision or a specific evidence correction to Signal Review.
 
 ## Result
 
-Return a meeting-ready agenda with decisions needed, owner questions, Senso links/references, and a short list of follow-ups.
+Return a meeting-ready agenda with decisions needed, owner questions, Atisbo links/references, and a short list of follow-ups.

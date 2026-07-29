@@ -1,13 +1,13 @@
 interface:
-  display_name: "Senso Outcome"
+  display_name: "Atisbo Outcome"
   short_description: "Record post-launch impact and learning"
-  default_prompt: "Use $outcome to review whether this Done Senso Solution produced the expected result."
+  default_prompt: "Use $outcome to review whether this Done Atisbo Solution produced the expected result."
 dependencies:
   tools:
     - type: "mcp"
       value: "senso"
-      description: "Senso Signals, Opportunities, Backlog, Decisions, and Outcomes"
+      description: "Atisbo Signals, Opportunities, Backlog, Decisions, and Outcomes"
       transport: "streamable_http"
-      url: "https://app.getsenso.xyz/api/mcp"
+      url: "https://app.atisbo.dev/api/mcp"
 policy:
   allow_implicit_invocation: true

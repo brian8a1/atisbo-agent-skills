@@ -1,9 +1,9 @@
 ---
 name: signal-review
-description: Review evidence already present in Senso Signals and make explicit triage corrections. Use when a product manager asks to review new Signals, discard noise, resolve an orphan, fix incorrect grouping, split or combine evidence, or inspect pending deal-breaker suggestions before Opportunities are acted on.
+description: Review evidence already present in Atisbo Signals and make explicit triage corrections. Use when a product manager asks to review new Signals, discard noise, resolve an orphan, fix incorrect grouping, split or combine evidence, or inspect pending deal-breaker suggestions before Opportunities are acted on.
 ---
 
-# Review Signals already in Senso
+# Review Signals already in Atisbo
 
 Work only on evidence that has completed Signal Intake. Organize the evidence without silently deciding what the team should build.
 

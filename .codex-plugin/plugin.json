@@ -1,26 +1,26 @@
 {
   "name": "senso",
-  "version": "0.4.1",
-  "description": "Use Senso Signals, Opportunities, Backlog, Decisions, and Outcomes from existing product, design, and engineering work.",
+  "version": "0.5.0",
+  "description": "Use Atisbo Signals, Opportunities, Backlog, Decisions, and Outcomes from existing product, design, and engineering work.",
   "author": {
-    "name": "Senso",
-    "url": "https://www.getsenso.xyz"
+    "name": "Atisbo",
+    "url": "https://atisbo.dev"
   },
-  "homepage": "https://www.getsenso.xyz",
+  "homepage": "https://atisbo.dev",
   "keywords": ["backlog", "customer-evidence", "product-decisions", "coding-agents", "mcp"],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Senso",
+    "displayName": "Atisbo",
     "shortDescription": "Evidence-backed work for coding agents",
-    "longDescription": "Use Senso from familiar product, design, and engineering interactions. Bring in Signals, review Opportunities, brief Backlog work, hand artifacts to human review, and record observed Outcomes without replacing native planning, design, coding, or review tools.",
-    "developerName": "Senso",
+    "longDescription": "Use Atisbo from familiar product, design, and engineering interactions. Bring in Signals, review Opportunities, brief Backlog work, hand artifacts to human review, and record observed Outcomes without replacing native planning, design, coding, or review tools.",
+    "developerName": "Atisbo",
     "category": "Productivity",
     "capabilities": ["Read", "Write"],
-    "websiteURL": "https://www.getsenso.xyz",
+    "websiteURL": "https://atisbo.dev",
     "defaultPrompt": [
-      "Use $signal-intake to add these interview notes to Senso with their provenance.",
-      "Use $backlog-brief to brief me on the Senso item already connected to this work.",
+      "Use $signal-intake to add these interview notes to Atisbo with their provenance.",
+      "Use $backlog-brief to brief me on the Atisbo item already connected to this work.",
       "Use $handoff to connect this completed artifact to its Backlog item for human review."
     ],
     "brandColor": "#111827"

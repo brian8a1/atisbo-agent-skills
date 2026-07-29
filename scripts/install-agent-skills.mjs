@@ -65,7 +65,7 @@ for (const [name, relativeDestination] of selected) {
     await cp(join(sourceRoot, skill), destination, { recursive: true, errorOnExist: true, force: false });
   }
 
-  process.stdout.write(`Installed ${skills.length} Senso skills for ${name} in ${destinationRoot}\n`);
+  process.stdout.write(`Installed ${skills.length} Atisbo skills for ${name} in ${destinationRoot}\n`);
 }
 
-process.stdout.write('Configure the Senso MCP server from .mcp.json and set SENSO_MCP_KEY in the agent environment.\n');
+process.stdout.write('Configure the Atisbo MCP server from .mcp.json and set SENSO_MCP_KEY in the agent environment.\n');

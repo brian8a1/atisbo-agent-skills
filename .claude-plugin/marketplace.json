@@ -1,15 +1,15 @@
 {
   "name": "senso",
   "owner": {
-    "name": "Senso",
-    "url": "https://www.getsenso.xyz"
+    "name": "Atisbo",
+    "url": "https://atisbo.dev"
   },
-  "description": "Use Senso from the product, design, and engineering interactions your team already has.",
+  "description": "Use Atisbo from the product, design, and engineering interactions your team already has.",
   "plugins": [
     {
       "name": "senso",
       "source": "./",
-      "description": "Bring Signals into Senso, review Opportunities, brief Backlog work, hand off artifacts, and record Outcomes."
+      "description": "Bring Signals into Atisbo, review Opportunities, brief Backlog work, hand off artifacts, and record Outcomes."
     }
   ]
 }

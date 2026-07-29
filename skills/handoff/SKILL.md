@@ -1,11 +1,11 @@
 ---
 name: handoff
-description: Hand a completed design or code change back to the existing Senso Backlog item for human review. Use when a designer has a reviewable artifact or an engineer has a PR, commit, checks, implementation summary, blocker, or technical decision that teammates need in Senso and the item should move to In Review.
+description: Hand a completed design or code change back to the existing Atisbo Backlog item for human review. Use when a designer has a reviewable artifact or an engineer has a PR, commit, checks, implementation summary, blocker, or technical decision that teammates need in Atisbo and the item should move to In Review.
 ---
 
 # Hand completed work to In Review
 
-Connect the artifact the user already produced to the Senso Backlog. Verify with the user's native tools; Senso preserves the product thread and review state.
+Connect the artifact the user already produced to the Atisbo Backlog. Verify with the user's native tools; Atisbo preserves the product thread and review state.
 
 ## Procedure
 
@@ -20,11 +20,11 @@ Connect the artifact the user already produced to the Senso Backlog. Verify with
 
 ## Guardrails
 
-- Do not claim Senso validated code, tests, accessibility, security, or design quality.
+- Do not claim Atisbo validated code, tests, accessibility, security, or design quality.
 - Do not create a new Opportunity or Solution to represent the artifact; attach it to the existing Backlog item.
 - Product Coverage is an optional advanced traceability check, not a substitute for native review and not a mandatory pipeline stage.
 - In Review requires human approval. A PR, merge, design link, or deployment is not an Outcome.
 
 ## Result
 
-Return the Senso item, artifact link, checks/review evidence, material decisions, open risks, and confirmed **In Review** state.
+Return the Atisbo item, artifact link, checks/review evidence, material decisions, open risks, and confirmed **In Review** state.

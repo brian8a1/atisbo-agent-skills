@@ -1,11 +1,11 @@
 ---
 name: opportunity-decision
-description: Support and record a product decision for one Senso Opportunity. Use when a product manager or designer is comparing responses, needs the evidence and contradictions behind an Opportunity, wants to create or update a Solution, record alternatives and reasoning, set an explicit priority boost, or decide that more evidence is required.
+description: Support and record a product decision for one Atisbo Opportunity. Use when a product manager or designer is comparing responses, needs the evidence and contradictions behind an Opportunity, wants to create or update a Solution, record alternatives and reasoning, set an explicit priority boost, or decide that more evidence is required.
 ---
 
 # Make an Opportunity decision
 
-Help the human choose a response to a confirmed Opportunity. Senso supplies evidence and memory; the human retains authority.
+Help the human choose a response to a confirmed Opportunity. Atisbo supplies evidence and memory; the human retains authority.
 
 ## Procedure
 
@@ -23,7 +23,7 @@ Help the human choose a response to a confirmed Opportunity. Senso supplies evid
 ## Guardrails
 
 - Do not generate a technical implementation plan; the decision records what and why, not how a repository must change.
-- Do not use legacy RICE fields to rank the Backlog. Use Senso's returned priority and only apply `priority_boost` when the human explicitly chooses it.
+- Do not use legacy RICE fields to rank the Backlog. Use Atisbo's returned priority and only apply `priority_boost` when the human explicitly chooses it.
 - Do not erase contradictory evidence or rejected alternatives.
 - Use `senso_map` only when the confirmed decision changes a Group, node, anchor, or metric relationship.
 

@@ -1,6 +1,6 @@
 ---
 name: backlog-brief
-description: Brief a product manager, designer, or engineer who is beginning work on one Senso Backlog item. Use when the user names a SEN reference, Opportunity, Solution, issue, branch, design task, or current work item and needs the relevant problem, Signals, Decision, Living Document, constraints, contradictions, and success expectation without an invented implementation workflow.
+description: Brief a product manager, designer, or engineer who is beginning work on one Atisbo Backlog item. Use when the user names a SEN reference, Opportunity, Solution, issue, branch, design task, or current work item and needs the relevant problem, Signals, Decision, Living Document, constraints, contradictions, and success expectation without an invented implementation workflow.
 ---
 
 # Brief one Backlog item
@@ -16,7 +16,7 @@ Bring the product context for the current work into the user's existing design o
    - Designer: affected user/context, observed behavior, contradictions, constraints, and unresolved product questions.
    - Engineer: expected observable behavior, product rationale, constraints, prior decisions, risks, and questions requiring product authority.
 4. If the user explicitly asks to take an **Active** item, use `senso_decide mode=update_solution` to assign it to the current agent and post one concise start comment.
-5. Hand control back to the user's normal tools and repository/design conventions. Do not manufacture Senso-specific working files.
+5. Hand control back to the user's normal tools and repository/design conventions. Do not manufacture Atisbo-specific working files.
 
 ## Guardrails
 
@@ -27,4 +27,4 @@ Bring the product context for the current work into the user's existing design o
 
 ## Result
 
-Return a role-adapted brief with Senso references, known decisions, contradictions, missing answers, current Backlog state, and ownership.
+Return a role-adapted brief with Atisbo references, known decisions, contradictions, missing answers, current Backlog state, and ownership.

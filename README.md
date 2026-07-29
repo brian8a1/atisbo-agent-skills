@@ -1,6 +1,6 @@
-# Senso skills for agents
+# Atisbo skills for agents
 
-Use Senso from the product, design, and engineering interactions your team already has. The skills do not teach an agent how to plan or write code; they teach it how to bring the right Senso context into existing work and how to return evidence, Decisions, handoffs, and Outcomes to the shared product record.
+Use Atisbo from the product, design, and engineering interactions your team already has. The skills do not teach an agent how to plan or write code; they teach it how to bring the right Atisbo context into existing work and how to return evidence, Decisions, handoffs, and Outcomes to the shared product record.
 
 ## Product language
 
@@ -14,7 +14,7 @@ Use Senso from the product, design, and engineering interactions your team alrea
 
 ## Skills
 
-| Skill | Existing interaction | Result in Senso |
+| Skill | Existing interaction | Result in Atisbo |
 |---|---|---|
 | `signal-intake` | Add interview notes, feedback, an incident, metric, or document | Signal, Knowledge, or Living Document evidence |
 | `signal-review` | Review evidence already captured | Correct classification and Opportunity grouping |
@@ -57,7 +57,7 @@ These are independent entry points, not a mandatory pipeline.
 
 ## MCP relationship
 
-The skills use Senso's six compact MCP tools instead of inventing new product capabilities:
+The skills use Atisbo's six compact MCP tools instead of inventing new product capabilities:
 
 | MCP tool | Responsibility |
 |---|---|
@@ -72,7 +72,7 @@ The agent continues using its own repository, design, GitHub, testing, and deliv
 
 ## Shared setup
 
-1. In Senso, open **Connect agents** from the sidebar.
+1. In Atisbo, open **Connect agents** from the sidebar.
 2. Install the skills in the repository or workspace where the agent runs.
 3. Generate a workspace MCP URL on the same page.
 4. Add the URL as a Streamable HTTP MCP server named `senso`.
@@ -113,7 +113,7 @@ Install the skills into `.cursor/skills/`:
 node claude-plugin/scripts/install-agent-skills.mjs --client cursor --target /path/to/repo
 ```
 
-Select `signal-intake`, `backlog-brief`, `handoff`, or another Senso interaction from the slash menu.
+Select `signal-intake`, `backlog-brief`, `handoff`, or another Atisbo interaction from the slash menu.
 
 ## Other agents
 
@@ -123,15 +123,15 @@ Choose the exact directory the client discovers:
 node claude-plugin/scripts/install-agent-skills.mjs --skills-dir .agent/skills --target /path/to/repo
 ```
 
-Any MCP-compatible client can use Senso's tools even when it does not support Agent Skills.
+Any MCP-compatible client can use Atisbo's tools even when it does not support Agent Skills.
 
 ## Behavioral contract
 
-- Respect manual Backlog order and Senso's evidence-weighted priority. Legacy RICE fields never rank work.
+- Respect manual Backlog order and Atisbo's evidence-weighted priority. Legacy RICE fields never rank work.
 - Never take work owned by someone else without explicit authorization.
 - Preserve source provenance and contradictory evidence.
 - Keep exploration read-only until the user requests or confirms a write.
-- Never claim Senso validates code, tests, accessibility, security, or design quality.
+- Never claim Atisbo validates code, tests, accessibility, security, or design quality.
 - Move an artifact to In Review only when it is ready for human approval.
 - Record an Outcome only from observed post-launch evidence.
 
