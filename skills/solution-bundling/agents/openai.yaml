@@ -1,0 +1,13 @@
+interface:
+  display_name: "Senso Solution Bundling"
+  short_description: "Cover several Opportunities with one Solution"
+  default_prompt: "Use $solution-bundling to check whether any of my Senso Opportunities could be solved together."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "senso"
+      description: "Senso Signals, Opportunities, Backlog, Decisions, and Outcomes"
+      transport: "streamable_http"
+      url: "https://app.getsenso.xyz/api/mcp"
+policy:
+  allow_implicit_invocation: true
