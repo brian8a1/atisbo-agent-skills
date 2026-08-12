@@ -9,9 +9,9 @@ Work only on evidence that has completed Signal Intake. Organize the evidence wi
 
 ## Procedure
 
-1. Call `senso_orient` with the triage snapshot when the user did not supply a Signal, snippet, or Opportunity reference.
-2. Use `senso_lookup` to open the relevant claim, orphan snippet, raw citation, or deal-breaker suggestion. Read source provenance before changing classification or grouping.
-3. Explain the proposed correction and its evidence. When the user requested a specific mutation, apply the matching `senso_decide` mode:
+1. Call `atisbo_orient` with the triage snapshot when the user did not supply a Signal, snippet, or Opportunity reference.
+2. Use `atisbo_lookup` to open the relevant claim, orphan snippet, raw citation, or deal-breaker suggestion. Read source provenance before changing classification or grouping.
+3. Explain the proposed correction and its evidence. When the user requested a specific mutation, apply the matching `atisbo_decide` mode:
    - `set_snippet_status` or `set_claim_review_status` for Signal/Review/Noise classification;
    - `reassign_snippet` when evidence belongs to another Opportunity;
    - `split_snippet` when one snippet was clustered into the wrong Opportunity;

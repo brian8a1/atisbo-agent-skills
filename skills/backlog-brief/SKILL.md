@@ -9,13 +9,13 @@ Bring the product context for the current work into the user's existing design o
 
 ## Procedure
 
-1. Resolve a supplied `SEN-{n}`, UUID, title, issue, or branch reference with `senso_lookup`. If no item is supplied, query `mode: work_queue` and ask the user to select rather than silently taking work.
+1. Resolve a supplied `SEN-{n}`, UUID, title, issue, or branch reference with `atisbo_lookup`. If no item is supplied, query `mode: work_queue` and ask the user to select rather than silently taking work.
 2. Read the Solution, parent Opportunity, relevant Living Document, recent Decisions/comments, and cited Signals needed to understand conflicts or constraints.
 3. Adapt the brief to the work already in front of the user:
    - Product manager: evidence, alternatives, decision gaps, ownership, and state.
    - Designer: affected user/context, observed behavior, contradictions, constraints, and unresolved product questions.
    - Engineer: expected observable behavior, product rationale, constraints, prior decisions, risks, and questions requiring product authority.
-4. If the user explicitly asks to take an **Active** item, use `senso_decide mode=update_solution` to assign it to the current agent and post one concise start comment.
+4. If the user explicitly asks to take an **Active** item, use `atisbo_decide mode=update_solution` to assign it to the current agent and post one concise start comment.
 5. Hand control back to the user's normal tools and repository/design conventions. Do not manufacture Atisbo-specific working files.
 
 ## Guardrails

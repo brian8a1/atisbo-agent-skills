@@ -9,12 +9,12 @@ Close the loop only with observed evidence. Output such as a design, PR, merge, 
 
 ## Procedure
 
-1. Resolve the Solution with `senso_lookup` and verify that it is **Done/Launched**. Read its Opportunity, original expectation, Decision history, and relevant Living Document.
+1. Resolve the Solution with `atisbo_lookup` and verify that it is **Done/Launched**. Read its Opportunity, original expectation, Decision history, and relevant Living Document.
 2. Establish the baseline, post-launch value or qualitative observation, measurement window, affected segment, source, and confounders.
-3. Use `senso_analyze` when Atisbo contains the necessary multi-entity or time-window data. If a supplied external metric or research result is not yet in Atisbo, capture it with `senso_capture` before recording the Outcome.
+3. Use `atisbo_analyze` when Atisbo contains the necessary multi-entity or time-window data. If a supplied external metric or research result is not yet in Atisbo, capture it with `atisbo_capture` before recording the Outcome.
 4. Compare evidence with the original expectation and propose one classification: `success`, `partial`, `miss`, or `unexpected`.
 5. Stop when the window is incomplete or evidence is insufficient. State exactly what and when to measure next.
-6. After human confirmation, call `senso_decide` with `mode: record_outcome`, the before/after values when available, and concise learning notes.
+6. After human confirmation, call `atisbo_decide` with `mode: record_outcome`, the before/after values when available, and concise learning notes.
 7. Report the stored Outcome and any reopened Opportunity or follow-up Decision indicated by newer Signals.
 
 ## Guardrails

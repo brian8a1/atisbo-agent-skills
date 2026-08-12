@@ -61,12 +61,12 @@ The skills use Atisbo's six compact MCP tools instead of inventing new product c
 
 | MCP tool | Responsibility |
 |---|---|
-| `senso_orient` | Workspace snapshot, changes, strategy, and integration health |
-| `senso_lookup` | Signals, Opportunities, Solutions, Backlog, Groups, Knowledge, and Living Documents |
-| `senso_capture` | New Signals, Knowledge, document updates, and evidence blocks |
-| `senso_decide` | Signal corrections, Solutions, Decisions, state, ownership, and Outcomes |
-| `senso_map` | Groups, nodes, anchors, edges, and metrics |
-| `senso_analyze` | Portfolio and time-window analysis |
+| `atisbo_orient` | Workspace snapshot, changes, strategy, and integration health |
+| `atisbo_lookup` | Signals, Opportunities, Solutions, Backlog, Groups, Knowledge, and Living Documents |
+| `atisbo_capture` | New Signals, Knowledge, document updates, and evidence blocks |
+| `atisbo_decide` | Signal corrections, Solutions, Decisions, state, ownership, and Outcomes |
+| `atisbo_map` | Groups, nodes, anchors, edges, and metrics |
+| `atisbo_analyze` | Portfolio and time-window analysis |
 
 The agent continues using its own repository, design, GitHub, testing, and delivery tools.
 
@@ -75,22 +75,22 @@ The agent continues using its own repository, design, GitHub, testing, and deliv
 1. In Atisbo, open **Connect agents** from the sidebar.
 2. Install the skills in the repository or workspace where the agent runs.
 3. Generate a workspace MCP URL on the same page.
-4. Add the URL as a Streamable HTTP MCP server named `senso`.
+4. Add the URL as a Streamable HTTP MCP server named `atisbo`.
 5. Keep the URL secret; it contains a revocable workspace key.
 
 ## Claude Code
 
 ```text
 /plugin marketplace add brian8a1/atisbo-agent-skills
-/plugin install senso@senso
+/plugin install atisbo@atisbo
 ```
 
-Type `/senso:` to discover the interactions, for example:
+Type `/atisbo:` to discover the interactions, for example:
 
 ```text
-/senso:product-review
-/senso:backlog-brief SEN-18
-/senso:handoff SEN-18
+/atisbo:product-review
+/atisbo:backlog-brief SEN-18
+/atisbo:handoff SEN-18
 ```
 
 For local development, start Claude Code with `--plugin-dir ./claude-plugin`.

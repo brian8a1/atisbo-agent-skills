@@ -1,10 +1,10 @@
 {
   "mcpServers": {
-    "senso": {
+    "atisbo": {
       "type": "http",
       "url": "https://app.atisbo.dev/api/mcp",
       "headers": {
-        "Authorization": "Bearer ${SENSO_MCP_KEY}"
+        "Authorization": "Bearer ${ATISBO_MCP_KEY}"
       }
     }
   }

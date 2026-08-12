@@ -5,7 +5,7 @@ interface:
 dependencies:
   tools:
     - type: "mcp"
-      value: "senso"
+      value: "atisbo"
       description: "Atisbo Signals, Opportunities, Backlog, Decisions, and Outcomes"
       transport: "streamable_http"
       url: "https://app.atisbo.dev/api/mcp"

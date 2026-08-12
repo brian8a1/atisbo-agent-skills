@@ -9,15 +9,15 @@ Help the human choose a response to a confirmed Opportunity. Atisbo supplies evi
 
 ## Procedure
 
-1. Resolve the Opportunity with `senso_lookup`. Read its detail, related Solutions, relevant Living Document, recent Decisions, and only the cited raw Signals needed to judge the choice.
-2. Use `senso_analyze` when the decision depends on cross-Opportunity volume, trend, source, segment, or activity rather than one item.
+1. Resolve the Opportunity with `atisbo_lookup`. Read its detail, related Solutions, relevant Living Document, recent Decisions, and only the cited raw Signals needed to judge the choice.
+2. Use `atisbo_analyze` when the decision depends on cross-Opportunity volume, trend, source, segment, or activity rather than one item.
 3. Present:
    - the problem and affected users/accounts;
    - evidence supporting it and contradictory evidence;
    - existing Solutions and prior decisions;
    - alternatives, assumptions, missing evidence, and reversibility;
    - the exact decision that remains human-owned.
-4. Do not write while the user is exploring. After an explicit decision, use `senso_decide` to create/update the Solution or log the Decision with its reasoning and alternatives.
+4. Do not write while the user is exploring. After an explicit decision, use `atisbo_decide` to create/update the Solution or log the Decision with its reasoning and alternatives.
 5. Re-read the Opportunity/Solution and report the resulting **Backlog** item, state, priority boost, and Living Document reference.
 
 ## Guardrails
@@ -25,7 +25,7 @@ Help the human choose a response to a confirmed Opportunity. Atisbo supplies evi
 - Do not generate a technical implementation plan; the decision records what and why, not how a repository must change.
 - Do not use legacy RICE fields to rank the Backlog. Use Atisbo's returned priority and only apply `priority_boost` when the human explicitly chooses it.
 - Do not erase contradictory evidence or rejected alternatives.
-- Use `senso_map` only when the confirmed decision changes a Group, node, anchor, or metric relationship.
+- Use `atisbo_map` only when the confirmed decision changes a Group, node, anchor, or metric relationship.
 
 ## Result
 

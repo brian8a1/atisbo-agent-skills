@@ -1,5 +1,5 @@
 {
-  "name": "senso",
+  "name": "atisbo",
   "owner": {
     "name": "Atisbo",
     "url": "https://atisbo.dev"
@@ -7,7 +7,7 @@
   "description": "Use Atisbo from the product, design, and engineering interactions your team already has.",
   "plugins": [
     {
-      "name": "senso",
+      "name": "atisbo",
       "source": "./",
       "description": "Bring Signals into Atisbo, review Opportunities, brief Backlog work, hand off artifacts, and record Outcomes."
     }

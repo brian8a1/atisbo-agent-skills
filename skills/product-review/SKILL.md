@@ -9,9 +9,9 @@ Produce a workspace-level review agenda from Atisbo. Default to read-only; a rev
 
 ## Procedure
 
-1. Establish the requested time window. Use `senso_orient` with `mode: whats_new` for change since a checkpoint, `mode: strategy` for Strategy Stack alignment, and `mode: snapshot` for current state.
-2. Call `senso_analyze` for portfolio questions spanning multiple Opportunities, Solutions, sources, states, or time periods. Prefer aggregates over reading every Signal.
-3. Use `senso_lookup` with `mode: work_queue` to inspect Backlog states and ownership. Open individual Opportunities, Solutions, or Living Documents only when needed to explain a material item.
+1. Establish the requested time window. Use `atisbo_orient` with `mode: whats_new` for change since a checkpoint, `mode: strategy` for Strategy Stack alignment, and `mode: snapshot` for current state.
+2. Call `atisbo_analyze` for portfolio questions spanning multiple Opportunities, Solutions, sources, states, or time periods. Prefer aggregates over reading every Signal.
+3. Use `atisbo_lookup` with `mode: work_queue` to inspect Backlog states and ownership. Open individual Opportunities, Solutions, or Living Documents only when needed to explain a material item.
 4. Organize the agenda into:
    - changes in Signals and Opportunities;
    - decisions required from humans;

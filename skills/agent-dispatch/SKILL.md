@@ -9,12 +9,12 @@ Atisbo can tell you which Backlog items are safe to hand over and which ones car
 
 ## Procedure
 
-1. Call `senso_lookup` with `mode=dispatch_queue`. It returns three lists: `ready`, `needs_judgement` (each with its reason), and `not_ready` (no brief written yet).
+1. Call `atisbo_lookup` with `mode=dispatch_queue`. It returns three lists: `ready`, `needs_judgement` (each with its reason), and `not_ready` (no brief written yet).
 2. Present `needs_judgement` first and treat it as the human's. Read each reason out — it blocks a signature, affects many accounts, scores low against the strategy, or a previous attempt already missed. Never route around it.
-3. For `not_ready` items, offer to write the brief with `senso_decide` `mode=create_solution_doc`. An implementer who starts from a title reconstructs the problem from scratch.
-4. For `ready` items the human approves, read `senso_lookup` `mode=implementation_context` to load the product intent and the coverage declaration template, then dispatch with `senso_decide` `mode=dispatch_solution`. The item moves to In Progress with an immutable Decision carrying the brief.
+3. For `not_ready` items, offer to write the brief with `atisbo_decide` `mode=create_solution_doc`. An implementer who starts from a title reconstructs the problem from scratch.
+4. For `ready` items the human approves, read `atisbo_lookup` `mode=implementation_context` to load the product intent and the coverage declaration template, then dispatch with `atisbo_decide` `mode=dispatch_solution`. The item moves to In Progress with an immutable Decision carrying the brief.
 5. Reference `SEN-{n}` in the PR branch, title, or body. The merge then moves the item to In Review without anyone updating Atisbo by hand.
-6. Before opening the PR, run `senso_decide` `mode=check_coverage` with what the work actually covers. Claims neither covered nor marked out of scope fail the check; unresolved contradictions must appear in risk notes.
+6. Before opening the PR, run `atisbo_decide` `mode=check_coverage` with what the work actually covers. Claims neither covered nor marked out of scope fail the check; unresolved contradictions must appear in risk notes.
 
 ## Guardrails
 

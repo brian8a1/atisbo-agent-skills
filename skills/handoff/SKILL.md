@@ -12,10 +12,10 @@ Connect the artifact the user already produced to the Atisbo Backlog. Verify wit
 1. Inspect the current artifact with available tools:
    - For code, read the diff/PR, repository instructions, tests, checks, migrations, and deployment risk.
    - For design, inspect the supplied file/link/export and identify the decisions, changed behavior, open questions, and review status.
-2. Resolve the existing `SEN-{n}` or Solution with `senso_lookup`. Confirm it is the work this artifact addresses and read recent comments for changed constraints.
+2. Resolve the existing `SEN-{n}` or Solution with `atisbo_lookup`. Confirm it is the work this artifact addresses and read recent comments for changed constraints.
 3. Summarize observable behavior, material tradeoffs, verification performed, unresolved risks, and the artifact URL/reference. Do not paste a terminal log.
-4. Use `senso_decide mode=update_solution` to post the handoff. Move the Solution to **In Review** only when the artifact is genuinely ready for a human.
-5. Use `senso_decide mode=log_decision` only for a technical or design choice that materially changes product behavior or future constraints.
+4. Use `atisbo_decide mode=update_solution` to post the handoff. Move the Solution to **In Review** only when the artifact is genuinely ready for a human.
+5. Use `atisbo_decide mode=log_decision` only for a technical or design choice that materially changes product behavior or future constraints.
 6. Re-read the item and report its final state and reviewer questions.
 
 ## Guardrails
