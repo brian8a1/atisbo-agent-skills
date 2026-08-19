@@ -1,0 +1,103 @@
+{
+  "_comment": "Snapshot of the MCP facade modes, generated FROM THE PRODUCT REPO. Not the source of truth — the product is. Regenerate with scripts/refresh-mcp-contract.md when the product changes.",
+  "generated_at": "2026-08-19",
+  "generated_from": "senso-claude-code/src/lib/tools/registry.ts",
+  "modes": {
+    "_aliases": {
+      "atisbo_map": {
+        "edit_node": "update_node",
+        "move_node": "update_node"
+      },
+      "atisbo_orient": {
+        "workspace": "snapshot"
+      }
+    },
+    "atisbo_analyze": [
+      "claims",
+      "solutions",
+      "activity"
+    ],
+    "atisbo_capture": [
+      "signal",
+      "knowledge",
+      "update_artefact",
+      "patch_artefact",
+      "add_artefact_evidence"
+    ],
+    "atisbo_decide": [
+      "triage",
+      "rename_claim",
+      "delete_claim",
+      "combine_claims",
+      "reassign_snippet",
+      "create_claim_from_snippet",
+      "split_snippet",
+      "create_solution",
+      "create_living_doc",
+      "update_solution",
+      "dispatch_solution",
+      "record_outcome",
+      "delete_solution",
+      "apply_solution_spec",
+      "update_strategy",
+      "log_decision",
+      "update_artefact_schedule",
+      "create_solution_doc",
+      "confirm_deal_breaker",
+      "reject_deal_breaker",
+      "flag_deal_breaker",
+      "delete_knowledge",
+      "set_claim_review_status",
+      "set_snippet_status",
+      "check_coverage"
+    ],
+    "atisbo_lookup": [
+      "open",
+      "resolve",
+      "claims",
+      "claim",
+      "similar_claims",
+      "solutions",
+      "solution",
+      "outcome_review",
+      "similar_solutions",
+      "work_queue",
+      "orphans",
+      "maps",
+      "map",
+      "node",
+      "context",
+      "knowledge",
+      "living_doc",
+      "attachments",
+      "accounts",
+      "deal_breakers",
+      "doc_patch_context",
+      "implementation_context"
+    ],
+    "atisbo_map": [
+      "apply",
+      "create",
+      "rename",
+      "delete",
+      "generate_nodes",
+      "create_node",
+      "update_node",
+      "delete_node",
+      "anchor",
+      "create_edge",
+      "delete_edge",
+      "metric_bind",
+      "preview_claim_snipes",
+      "sync_claim_snipes",
+      "regroup",
+      "link_claims"
+    ],
+    "atisbo_orient": [
+      "snapshot",
+      "whats_new",
+      "strategy",
+      "integrations"
+    ]
+  }
+}

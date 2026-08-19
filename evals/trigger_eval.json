@@ -1,0 +1,18 @@
+[
+  {"query": "Añade estas notas de la entrevista con el cliente a Atisbo", "should_trigger": "signal-intake"},
+  {"query": "Tengo un incidente de producción que debería quedar registrado como evidencia", "should_trigger": "signal-intake"},
+  {"query": "Revisa las señales nuevas y dime cuáles son ruido", "should_trigger": "signal-review"},
+  {"query": "Esta Opportunity está mezclando dos problemas distintos", "should_trigger": "signal-review"},
+  {"query": "¿Qué hacemos con la Opportunity de los invitados que no completan el registro?", "should_trigger": "opportunity-decision"},
+  {"query": "Necesito decidir cómo responder a este problema y dejar constancia del porqué", "should_trigger": "opportunity-decision"},
+  {"query": "Prepárame la revisión de producto de esta semana", "should_trigger": "product-review"},
+  {"query": "Voy a empezar con SEN-18, ponme en contexto", "should_trigger": "backlog-brief"},
+  {"query": "¿Qué trabajo del backlog puede coger un agente de código?", "should_trigger": "agent-dispatch"},
+  {"query": "Ya tengo el PR listo, pásalo a revisión en Atisbo", "should_trigger": "handoff"},
+  {"query": "Lanzamos hace tres semanas, vamos a mirar qué pasó", "should_trigger": "outcome"},
+  {"query": "Arregla este bug de TypeScript en el componente", "should_trigger": false},
+  {"query": "¿Qué es un Northstar Metric?", "should_trigger": false},
+  {"query": "Escribe un test unitario para esta función", "should_trigger": false},
+  {"query": "Resume este artículo sobre priorización", "should_trigger": false},
+  {"query": "Haz un roadmap trimestral en una hoja de cálculo", "should_trigger": false}
+]

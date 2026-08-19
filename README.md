@@ -88,6 +88,48 @@ The skills use Atisbo's six compact MCP tools instead of inventing new product c
 
 The agent continues using its own repository, design, GitHub, testing, and delivery tools.
 
+## Testing the skills
+
+Three levels, in increasing cost.
+
+**1. Claims — runs today, no account features needed.**
+
+```bash
+node scripts/validate-skill-claims.mjs
+```
+
+Checks that what the skills tell an agent to do actually exists: every `mode=X` attributed to
+a tool against `contracts/mcp-modes.json`, every path in a command against this repo, every
+`*_MCP_KEY` named in prose against `.mcp.json`, and each skill's frontmatter against its
+directory name. It exits 1 on a broken claim. It was written after three instructions in this
+repo were found pointing at things that were not there — a retired tool mode, a variable
+nobody reads, and an install path from a layout this repo does not have. Prose cannot fail a
+type check; this is the smallest thing that makes it falsifiable.
+
+**2. Behaviour — `claude plugin eval` (early access).**
+
+```bash
+claude plugin eval . --case three-candidates
+claude plugin eval .                       # whole suite
+```
+
+`evals/` holds cases for the behaviour that is easy to lose and hard to notice: proposing
+several candidates instead of one, refusing to grade an Outcome against an expectation that
+was never recorded, and refusing to dispatch work that carries no hypothesis. Each case is a
+`prompt.md` plus `graders/criteria.md` written as pass/fail conditions rather than a rubric,
+so a near miss reads as a failure and not as a 0.7. `evals/trigger_eval.json` covers the other
+half of the problem — a skill that never fires helps nobody.
+
+The cases describe the workspace state in the prompt instead of requiring live MCP calls, so
+they run without credentials and without mutating a real workspace.
+
+**3. Against a real workspace — dogfooding.**
+
+Point the agent at your own Atisbo and walk one Opportunity end to end. This is the only level
+that catches what neither of the others can: an extraction that silently drops half a snippet,
+a judge that groups two problems into one, a Living Document that reads fine and says less
+than the evidence it cites.
+
 ## Shared setup
 
 1. In Atisbo, open **Connect agents** from the sidebar.
