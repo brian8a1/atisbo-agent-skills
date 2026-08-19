@@ -34,6 +34,8 @@ Close the loop only with observed evidence. Output such as a design, PR, merge, 
 - Do not rewrite the historical Solution to make the Outcome look better.
 - Create a follow-up Solution only through a separate Opportunity Decision — including when the branch chosen is "try a different solution".
 
+**Before and after.** You grade against the expectation recorded when the Solution was created — that is why it must be read before any result. The branch you record reopens an Opportunity Decision when it is another solution or another problem, which is how the cycle continues instead of ending.
+
 ## Result
 
 Return the recorded expectation, the observed evidence, the side effect checked, comparison window, confirmed classification, the next branch with its reason, and the stored Outcome reference.

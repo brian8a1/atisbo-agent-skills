@@ -25,6 +25,8 @@ Atisbo can tell you which Backlog items are safe to hand over and which ones car
 - Atisbo validates PRODUCT traceability only. It never verifies code correctness, tests, or CI — that stays with GitHub and human reviewers.
 - Do not create a parallel work item for the implementation. Dispatch the existing Solution.
 
+**Before and after.** You hand over what an Opportunity Decision already decided; when the expectation or the alternatives are missing, that decision is what is missing, not a field. What you dispatch returns through Handoff, and only then can Outcome say anything.
+
 ## Result
 
 Return the dispatched items with their briefs and SEN ids, the list that still needs the human with each reason, any item whose brief had to be written first, and any item held back because it had no recorded expectation.

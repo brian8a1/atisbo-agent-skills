@@ -32,6 +32,8 @@ Connect the artifact the user already produced to the Atisbo Backlog. Verify wit
 - Product Coverage is an optional advanced traceability check, not a substitute for native review and not a mandatory pipeline stage.
 - In Review requires human approval. A PR, merge, design link, or deployment is not an Outcome.
 
+**Before and after.** You close what was dispatched or picked up from a brief. Whether the result can be observed at all is decided here, not later: Outcome cannot close a loop that nobody instrumented.
+
 ## Result
 
 Return the Atisbo item, artifact link, checks/review evidence, material decisions, whether the result is measurable, who still needs to know, open risks, and confirmed **In Review** state.

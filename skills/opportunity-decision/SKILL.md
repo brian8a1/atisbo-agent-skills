@@ -42,6 +42,8 @@ Help the human choose a response to a confirmed Opportunity. Atisbo supplies evi
 - Do not erase contradictory evidence or rejected alternatives.
 - Use `atisbo_map` only when the confirmed decision changes a Group, node, anchor, or metric relationship.
 
+**Before and after.** You judge evidence that Signal Review already grouped. What you record here is read three times later: by Agent Dispatch before handing the work over, by Backlog Brief when someone picks it up, and by Outcome to grade the result against a measure that already existed. An unrecorded expectation is not a gap in this step — it is a missing input in the next three.
+
 ## Result
 
 Return the confirmed Decision, created or updated Solution, the recorded expectation and success measure, supporting references, rejected alternatives with their reasons, and the remaining measurement question.

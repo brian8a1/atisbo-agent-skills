@@ -26,6 +26,8 @@ Turn source material already in front of the user into traceable Atisbo evidence
 - Do not manually create an Opportunity, Solution, priority, or outcome. Those are later human/product interactions.
 - Do not convert an agent opinion into customer evidence.
 
+**Before and after.** Nothing has to precede this — evidence enters wherever it appears. What you capture is clustered by the pipeline, not by you, and reaches a human through Signal Review or an Opportunity.
+
 ## Result
 
 Leave the user with a concise receipt: source captured, destination in Atisbo, created reference, and anything that still needs Signal Review.

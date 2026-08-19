@@ -26,6 +26,8 @@ Bring the product context for the current work into the user's existing design o
 - Do not create `spec.md`, `plan.md`, task lists, branches, or code merely because the brief was requested.
 - Label missing information as a question, not a requirement.
 
+**Before and after.** You are reading what an Opportunity Decision recorded and, when an earlier attempt exists, what its Outcome concluded. You write nothing except an optional start comment — the work itself goes back through Handoff.
+
 ## Result
 
 Return a role-adapted brief with Atisbo references, known decisions, contradictions, missing answers, current Backlog state, and ownership.

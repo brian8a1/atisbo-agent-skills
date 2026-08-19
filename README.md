@@ -25,7 +25,25 @@ Use Atisbo from the product, design, and engineering interactions your team alre
 | `handoff` | Return a design or PR for review | Artifact summary on the Solution thread and In Review state |
 | `outcome` | Review a launched Solution after observation | Success, partial, miss, or unexpected Outcome |
 
-These are independent entry points, not a mandatory pipeline.
+These are independent entry points, not a mandatory pipeline. Enter wherever the real work is.
+
+## What each step leaves for the next one
+
+The skills stay independent, but some of them write things another one later reads. That trace
+is worth knowing, because a step that skips its part leaves the next one guessing.
+
+| Written by | What is written | Read by |
+|---|---|---|
+| `signal-intake` | evidence with its provenance | the pipeline, which clusters it into an Opportunity |
+| `signal-review` | corrected grouping and the segment split | `opportunity-decision`, to judge one problem instead of three |
+| `opportunity-decision` | hypothesis, success measure, the measure that must not get worse, and the rejected alternatives with their reasons | `agent-dispatch` before handing work over · `backlog-brief` when someone picks it up · `outcome` to grade against something that already existed |
+| `agent-dispatch` / `handoff` | the brief, the artifact, and whether the result is even measurable | `outcome`, which cannot close a loop nobody instrumented |
+| `outcome` | observed result, side effect checked, and the branch chosen next | `opportunity-decision`, when the branch is another solution or another problem |
+
+Atisbo does not start from a chosen objective the way classic product process does — it starts
+from evidence that arrives on its own, and the human decides what deserves a response. So the
+cycle has no fixed first step; it has a shape: evidence → problem → decision → work → observed
+result → the next branch, which reopens a decision rather than ending anything.
 
 ## Which skills each role uses
 
@@ -93,14 +111,14 @@ Type `/atisbo:` to discover the interactions, for example:
 /atisbo:handoff SEN-18
 ```
 
-For local development, start Claude Code with `--plugin-dir ./claude-plugin`.
+For local development, start Claude Code with `--plugin-dir .` from a clone of this repository.
 
 ## Codex
 
 Install the canonical skills into `.agents/skills/`:
 
 ```bash
-node claude-plugin/scripts/install-agent-skills.mjs --client codex --target /path/to/repo
+node scripts/install-agent-skills.mjs --client codex --target /path/to/repo
 ```
 
 Invoke a skill explicitly, for example `$product-review`, `$backlog-brief`, or `$handoff`, or ask naturally for the same interaction.
@@ -110,7 +128,7 @@ Invoke a skill explicitly, for example `$product-review`, `$backlog-brief`, or `
 Install the skills into `.cursor/skills/`:
 
 ```bash
-node claude-plugin/scripts/install-agent-skills.mjs --client cursor --target /path/to/repo
+node scripts/install-agent-skills.mjs --client cursor --target /path/to/repo
 ```
 
 Select `signal-intake`, `backlog-brief`, `handoff`, or another Atisbo interaction from the slash menu.
@@ -120,7 +138,7 @@ Select `signal-intake`, `backlog-brief`, `handoff`, or another Atisbo interactio
 Choose the exact directory the client discovers:
 
 ```bash
-node claude-plugin/scripts/install-agent-skills.mjs --skills-dir .agent/skills --target /path/to/repo
+node scripts/install-agent-skills.mjs --skills-dir .agent/skills --target /path/to/repo
 ```
 
 Any MCP-compatible client can use Atisbo's tools even when it does not support Agent Skills.

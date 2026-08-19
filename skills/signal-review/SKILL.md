@@ -30,6 +30,8 @@ Work only on evidence that has completed Signal Intake. Organize the evidence wi
 - Volume is not severity. A single Signal from an account about to churn can outweigh twenty low-stakes ones; say which is which instead of ranking by count.
 - Preserve human-pinned classifications and assignments unless the user explicitly overrides them.
 
+**Before and after.** You work on evidence that already completed intake. The grouping and the segment split you settle here are what an Opportunity Decision later judges — a cluster left holding two different problems becomes one bad decision.
+
 ## Result
 
 Return the reviewed Signal references, final classification/grouping, the segment split you found or ruled out, and the smallest unresolved question requiring product judgment.
