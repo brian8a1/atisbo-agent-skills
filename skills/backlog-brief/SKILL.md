@@ -11,12 +11,13 @@ Bring the product context for the current work into the user's existing design o
 
 1. Resolve a supplied `SEN-{n}`, UUID, title, issue, or branch reference with `atisbo_lookup`. If no item is supplied, query `mode: work_queue` and ask the user to select rather than silently taking work.
 2. Read the Solution, parent Opportunity, relevant Living Document, recent Decisions/comments, and cited Signals needed to understand conflicts or constraints.
-3. Adapt the brief to the work already in front of the user:
+3. Lead with what was already decided and what was already ruled out: the recorded hypothesis and success measure, the alternatives considered and why they lost, and — when an earlier attempt exists — its Outcome and the branch chosen afterwards. Someone who does not know what was rejected re-proposes it, and someone who does not know the success measure builds toward a different one. When the item carries no recorded expectation, say so plainly; that is a question for the human, not a gap to fill in.
+4. Adapt the brief to the work already in front of the user:
    - Product manager: evidence, alternatives, decision gaps, ownership, and state.
    - Designer: affected user/context, observed behavior, contradictions, constraints, and unresolved product questions.
    - Engineer: expected observable behavior, product rationale, constraints, prior decisions, risks, and questions requiring product authority.
-4. If the user explicitly asks to take an **Active** item, use `atisbo_decide mode=update_solution` to assign it to the current agent and post one concise start comment.
-5. Hand control back to the user's normal tools and repository/design conventions. Do not manufacture Atisbo-specific working files.
+5. If the user explicitly asks to take an **Active** item, use `atisbo_decide mode=update_solution` to assign it to the current agent and post one concise start comment.
+6. Hand control back to the user's normal tools and repository/design conventions. Do not manufacture Atisbo-specific working files.
 
 ## Guardrails
 

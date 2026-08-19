@@ -17,8 +17,10 @@ Produce a workspace-level review agenda from Atisbo. Default to read-only; a rev
    - decisions required from humans;
    - Backlog work that is blocked, unowned, stale, or In Review;
    - contradictions or strategic misalignment;
-   - Done items awaiting measurement or showing new evidence.
+   - Done items awaiting measurement or showing new evidence;
+   - launched work whose expectation was never recorded, and launched work whose Outcome was recorded without a next branch — both are places where the loop silently stopped.
 5. For every recommendation, cite the Atisbo entity or aggregate that supports it. Separate facts, interpretations, and proposed decisions.
+6. Report the numbers the workspace already has rather than proposing new instrumentation: bound metrics with their baseline, target and trend, and any anomaly that produced evidence in the window. When a question needs a measure nobody is collecting, name the question — do not design an analytics scheme inside Atisbo.
 
 ## Guardrails
 

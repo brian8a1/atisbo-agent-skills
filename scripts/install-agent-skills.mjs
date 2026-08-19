@@ -68,4 +68,4 @@ for (const [name, relativeDestination] of selected) {
   process.stdout.write(`Installed ${skills.length} Atisbo skills for ${name} in ${destinationRoot}\n`);
 }
 
-process.stdout.write('Configure the Atisbo MCP server from .mcp.json and set SENSO_MCP_KEY in the agent environment.\n');
+process.stdout.write('Configure the Atisbo MCP server from .mcp.json and set ATISBO_MCP_KEY in the agent environment.\n');

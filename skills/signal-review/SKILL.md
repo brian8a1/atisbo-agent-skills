@@ -11,22 +11,25 @@ Work only on evidence that has completed Signal Intake. Organize the evidence wi
 
 1. Call `atisbo_orient` with the triage snapshot when the user did not supply a Signal, snippet, or Opportunity reference.
 2. Use `atisbo_lookup` to open the relevant claim, orphan snippet, raw citation, or deal-breaker suggestion. Read source provenance before changing classification or grouping.
-3. Explain the proposed correction and its evidence. When the user requested a specific mutation, apply the matching `atisbo_decide` mode:
+3. **Read the grouped evidence by segment before judging it.** An average hides the case that matters. Use what the evidence already carries — account, signal origin (customer / internal / operational), modality, recency, deal-breaker flag — and say whether the Opportunity is one problem or several wearing the same words. A cluster where enterprise accounts and free users complain about the same screen for opposite reasons is a split, not an Opportunity.
+4. Describe what you find in the user's terms, not the product's: when [circumstance], the user was trying to [job], and [what got in the way]. Where the evidence does not support that shape, say what is missing instead of filling it in. Never invent a persona, a segment, or a motive the cited Signals do not show.
+5. Explain the proposed correction and its evidence. When the user requested a specific mutation, apply the matching `atisbo_decide` mode:
    - `set_snippet_status` or `set_claim_review_status` for Signal/Review/Noise classification;
    - `reassign_snippet` when evidence belongs to another Opportunity;
    - `split_snippet` when one snippet was clustered into the wrong Opportunity;
    - `create_claim_from_snippet` when an orphan deserves its own Opportunity;
    - `combine_claims` only for genuinely duplicate Opportunities;
    - deal-breaker confirm/reject only after reading the cited source.
-4. Re-read the affected entity and state what changed in **Signals** or **Opportunities**.
+6. Re-read the affected entity and state what changed in **Signals** or **Opportunities**.
 
 ## Guardrails
 
 - An active Opportunity is already a live problem. Do not call `triage` merely to "confirm" it.
 - Both `real_fixed` and `noise` close a claim. Use `real_fixed` only when the problem was real and is already handled.
 - Do not create a Solution during Signal Review. Move to an Opportunity Decision when the team is choosing a response.
+- Volume is not severity. A single Signal from an account about to churn can outweigh twenty low-stakes ones; say which is which instead of ranking by count.
 - Preserve human-pinned classifications and assignments unless the user explicitly overrides them.
 
 ## Result
 
-Return the reviewed Signal references, final classification/grouping, and the smallest unresolved question requiring product judgment.
+Return the reviewed Signal references, final classification/grouping, the segment split you found or ruled out, and the smallest unresolved question requiring product judgment.
