@@ -1,6 +1,7 @@
 ---
 name: opportunity-decision
 description: Support and record a product decision for one Atisbo Opportunity. Use when a product manager or designer is comparing responses, needs the evidence and contradictions behind an Opportunity, wants to explore several candidate solutions before committing, create or update a Solution, record alternatives and reasoning, set an explicit priority boost, or decide that more evidence is required.
+compatibility: Needs an Atisbo workspace connection over Streamable HTTP MCP (https://app.atisbo.dev/api/mcp) with a Bearer API key generated in the Atisbo app under Settings > Account > Connect agents. Requires network access.
 ---
 
 # Make an Opportunity decision

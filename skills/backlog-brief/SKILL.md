@@ -1,6 +1,7 @@
 ---
 name: backlog-brief
 description: Brief a product manager, designer, or engineer who is beginning work on one Atisbo Backlog item. Use when the user names a SEN reference, Opportunity, Solution, issue, branch, design task, or current work item and needs the relevant problem, Signals, Decision, Living Document, constraints, contradictions, and success expectation without an invented implementation workflow.
+compatibility: Needs an Atisbo workspace connection over Streamable HTTP MCP (https://app.atisbo.dev/api/mcp) with a Bearer API key generated in the Atisbo app under Settings > Account > Connect agents. Requires network access.
 ---
 
 # Brief one Backlog item

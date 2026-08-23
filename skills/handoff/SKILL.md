@@ -1,6 +1,7 @@
 ---
 name: handoff
 description: Hand a completed design or code change back to the existing Atisbo Backlog item for human review. Use when a designer has a reviewable artifact or an engineer has a PR, commit, checks, implementation summary, blocker, or technical decision that teammates need in Atisbo and the item should move to In Review.
+compatibility: Needs an Atisbo workspace connection over Streamable HTTP MCP (https://app.atisbo.dev/api/mcp) with a Bearer API key generated in the Atisbo app under Settings > Account > Connect agents. Requires network access.
 ---
 
 # Hand completed work to In Review

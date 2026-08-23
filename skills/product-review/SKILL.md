@@ -1,6 +1,7 @@
 ---
 name: product-review
 description: Prepare a recurring product, weekly, roadmap, or backlog review from the current Atisbo workspace. Use when a product manager or product leader needs what changed, growing Opportunities, blocked Decisions, unowned or stalled Backlog work, new contradictions, integration health, or launched Solutions awaiting an Outcome.
+compatibility: Needs an Atisbo workspace connection over Streamable HTTP MCP (https://app.atisbo.dev/api/mcp) with a Bearer API key generated in the Atisbo app under Settings > Account > Connect agents. Requires network access.
 ---
 
 # Prepare a product review

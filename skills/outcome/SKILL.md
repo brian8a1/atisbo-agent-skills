@@ -1,6 +1,7 @@
 ---
 name: outcome
 description: Review and record the observed Outcome of a Done Atisbo Solution after launch, and decide what happens next. Use when a product manager, designer, or engineer has post-launch metrics, research, incidents, customer evidence, or an observation window and needs to compare the result with the original expectation as success, partial, miss, or unexpected.
+compatibility: Needs an Atisbo workspace connection over Streamable HTTP MCP (https://app.atisbo.dev/api/mcp) with a Bearer API key generated in the Atisbo app under Settings > Account > Connect agents. Requires network access.
 ---
 
 # Record post-launch learning

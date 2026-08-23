@@ -1,6 +1,7 @@
 ---
 name: signal-intake
 description: Bring a source that is currently outside Atisbo into Signals with the correct provenance and routing. Use when the user has customer feedback, interview or usability notes, a support conversation, incident, bug report, metric, document, or external finding that should become Atisbo evidence or reusable Knowledge.
+compatibility: Needs an Atisbo workspace connection over Streamable HTTP MCP (https://app.atisbo.dev/api/mcp) with a Bearer API key generated in the Atisbo app under Settings > Account > Connect agents. Requires network access.
 ---
 
 # Add a source to Signals

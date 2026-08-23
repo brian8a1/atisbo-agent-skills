@@ -1,6 +1,7 @@
 ---
 name: signal-review
 description: Review evidence already present in Atisbo Signals and make explicit triage corrections. Use when a product manager asks to review new Signals, discard noise, resolve an orphan, fix incorrect grouping, split or combine evidence, or inspect pending deal-breaker suggestions before Opportunities are acted on.
+compatibility: Needs an Atisbo workspace connection over Streamable HTTP MCP (https://app.atisbo.dev/api/mcp) with a Bearer API key generated in the Atisbo app under Settings > Account > Connect agents. Requires network access.
 ---
 
 # Review Signals already in Atisbo

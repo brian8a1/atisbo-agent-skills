@@ -1,6 +1,7 @@
 ---
 name: agent-dispatch
 description: Separate Atisbo Backlog work a coding agent can take from work that still needs the product manager, then hand over only the former. Use when asked what an agent could pick up, when a Backlog has specified items waiting, or before giving implementation work to a coding agent.
+compatibility: Needs an Atisbo workspace connection over Streamable HTTP MCP (https://app.atisbo.dev/api/mcp) with a Bearer API key generated in the Atisbo app under Settings > Account > Connect agents. Requires network access.
 ---
 
 # Hand Backlog work to a coding agent
