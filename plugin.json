@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "atisbo",
+  "version": "0.7.0",
+  "description": "Use Atisbo Signals, Opportunities, Backlog, Decisions, and Outcomes from existing product, design, and engineering work.",
+  "author": {
+    "name": "Atisbo",
+    "url": "https://atisbo.dev"
+  },
+  "homepage": "https://atisbo.dev",
+  "repository": "https://github.com/brian8a1/atisbo-agent-skills",
+  "keywords": ["signals", "backlog", "product", "agent-skills", "mcp"]
+}
