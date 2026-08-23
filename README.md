@@ -2,6 +2,8 @@
 
 Use Atisbo from the product, design, and engineering interactions your team already has. The skills do not teach an agent how to plan or write code; they teach it how to bring the right Atisbo context into existing work and how to return evidence, Decisions, handoffs, and Outcomes to the shared product record.
 
+Atisbo lives at [atisbo.dev](https://atisbo.dev). Agents connect through its MCP server ([docs](https://app.atisbo.dev/docs/api/mcp-server), machine-readable manifest at [`/.well-known/mcp.json`](https://app.atisbo.dev/.well-known/mcp.json)), and [`llms.txt`](https://app.atisbo.dev/llms.txt) is the short brief an arriving model reads first. An agent editing this repository starts from [AGENTS.md](AGENTS.md).
+
 ## Product language
 
 - **Signals** are source evidence: feedback, interviews, observations, incidents, and metrics.
@@ -185,6 +187,10 @@ node scripts/install-agent-skills.mjs --skills-dir .agent/skills --target /path/
 
 Any MCP-compatible client can use Atisbo's tools even when it does not support Agent Skills.
 
+## Agent Plugins
+
+The repository root carries a `plugin.json` conforming to the [Agent Plugins specification](https://agent-plugins.org/specification) v1.0.0, so a client that loads plugins by that format discovers `skills/` from its fixed location without per-client instructions. The manifest is metadata only, and it deliberately ships no `mcp.json`: the specification has no portable way to carry credentials, so the MCP connection stays workspace-specific through `.mcp.json`.
+
 ## Behavioral contract
 
 - Respect manual Backlog order and Atisbo's evidence-weighted priority. Legacy RICE fields never rank work.
@@ -197,4 +203,4 @@ Any MCP-compatible client can use Atisbo's tools even when it does not support A
 
 ## Publishing note
 
-This folder is the cross-agent source of truth and is mirrored to the public plugin repository. Keep the Claude and Codex manifests on the same version when publishing.
+This folder is the cross-agent source of truth and is mirrored to the public plugin repository. Keep the Claude, Codex, and Agent Plugins (`plugin.json`) manifests on the same version when publishing.
