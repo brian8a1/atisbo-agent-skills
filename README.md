@@ -90,6 +90,8 @@ The skills use Atisbo's six compact MCP tools instead of inventing new product c
 
 The agent continues using its own repository, design, GitHub, testing, and delivery tools.
 
+Prefer not to wire MCP by hand? [`packages/mcp-client`](packages/mcp-client) is the official zero-dependency TypeScript client (`npm i atisbo`) for both servers — the public docs server needs no key, the product server takes the same workspace key as `.mcp.json`. Publishing it is Brian's one command, documented in [PUBLISH.md](PUBLISH.md).
+
 ## Testing the skills
 
 Three levels, in increasing cost.

@@ -1,0 +1,53 @@
+{
+  "name": "atisbo",
+  "version": "0.1.0",
+  "description": "Zero-dependency TypeScript client for Atisbo's two public MCP servers: the public documentation server (no auth) and the product server (workspace API key).",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brian8a1/atisbo-agent-skills.git",
+    "directory": "packages/mcp-client"
+  },
+  "homepage": "https://atisbo.dev",
+  "bugs": "https://github.com/brian8a1/atisbo-agent-skills/issues",
+  "keywords": [
+    "atisbo",
+    "mcp",
+    "model-context-protocol",
+    "jsonrpc",
+    "product-management",
+    "voice-of-customer",
+    "api-client"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/cjs/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs && npm run build:dist-pkg",
+    "build:esm": "tsc -p tsconfig.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:dist-pkg": "node scripts/write-cjs-package-type.mjs",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "prepublishOnly": "npm run test"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  }
+}
