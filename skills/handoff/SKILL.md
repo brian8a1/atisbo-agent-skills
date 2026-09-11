@@ -22,6 +22,7 @@ Connect the artifact the user already produced to the Atisbo Backlog. Verify wit
    - what would make this reversible if it goes wrong.
    An unmeasurable launch is not a blocker to raise later; it is a blocker now, because the loop cannot close without it.
 5. Use `atisbo_decide mode=update_solution` to post the handoff. Move the Solution to **In Review** only when the artifact is genuinely ready for a human.
+   **Human-summary-first.** Open the handoff comment with 2-4 plain-language sentences — what changed, why it matters, what a reviewer needs to know — before any file:line citation, commit SHA, or log excerpt. No jargon-first openers, no ALL-CAPS emphasis, no unlabeled bullet fragment as the first line. Put the technical detail under its own `## Detalle técnico` heading at the end of the comment; it renders collapsed by default and a reviewer expands it, but the raw comment still carries all of it. Forward-only — do not rewrite past comments to match this.
 6. Use `atisbo_decide mode=log_decision` only for a technical or design choice that materially changes product behavior or future constraints.
 7. Re-read the item and report its final state and reviewer questions.
 
