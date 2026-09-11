@@ -19,6 +19,7 @@ Close the loop only with observed evidence. Output such as a design, PR, merge, 
 6. Compare evidence with the expectation and propose one classification: `success`, `partial`, `miss`, or `unexpected`.
 7. Stop when the window is incomplete or evidence is insufficient. State exactly what and when to measure next.
 8. After human confirmation, call `atisbo_decide` with `mode: record_outcome`, the before/after values when available, and concise learning notes.
+   **Human-summary-first.** Open the learning notes with 2-4 plain-language sentences — what was observed, why it matters, what it means for the next step — before any metric dump or query output. No jargon-first openers, no ALL-CAPS emphasis. Put raw evidence/numbers under a `## Detalle técnico` heading at the end; it renders collapsed by default, and the raw notes still carry everything. Forward-only — do not rewrite past Outcomes to match this.
 9. **Ask what happens next and record it.** There are four answers and they are mutually exclusive:
    - optimize the current solution — value was created, now capture more of it;
    - try a different solution — the problem hypothesis stands, this response did not work;

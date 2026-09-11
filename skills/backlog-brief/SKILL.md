@@ -17,7 +17,7 @@ Bring the product context for the current work into the user's existing design o
    - Product manager: evidence, alternatives, decision gaps, ownership, and state.
    - Designer: affected user/context, observed behavior, contradictions, constraints, and unresolved product questions.
    - Engineer: expected observable behavior, product rationale, constraints, prior decisions, risks, and questions requiring product authority.
-5. If the user explicitly asks to take an **Active** item, use `atisbo_decide mode=update_solution` to assign it to the current agent and post one concise start comment.
+5. If the user explicitly asks to take an **Active** item, use `atisbo_decide mode=update_solution` to assign it to the current agent and post one concise start comment. **Human-summary-first:** the comment leads with a plain-language sentence or two, not a jargon-first opener — if it needs technical detail, put that under a `## Detalle técnico` heading at the end (collapsed by default in the dashboard, still fully present in the raw comment). Forward-only — do not rewrite past comments.
 6. Hand control back to the user's normal tools and repository/design conventions. Do not manufacture Atisbo-specific working files.
 
 ## Guardrails

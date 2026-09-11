@@ -34,6 +34,7 @@ Help the human choose a response to a confirmed Opportunity. Atisbo supplies evi
    - `decisionLog.alternatives`: the candidates from step 5 that were not chosen;
    - `decisionLog.reasoning`: why this one won over those.
    Without this the Outcome is later decided from memory, and the rejected options are gone exactly when a failed attempt makes them valuable again.
+   **Human-summary-first.** `problem`, `proposal`, and `hypothesis` open with 2-4 plain-language sentences for a human PM — what the problem is, why it matters, what the response changes — before any evidence dump. No jargon-first openers, no ALL-CAPS emphasis, no unlabeled bullet fragment as the first line. Technical evidence (file:line citations, commit SHAs, metric dumps, query output) goes under its own `## Detalle técnico` heading at the end of the field — the dashboard renders that heading and everything after it collapsed by default; a human expands it, an agent reading the raw field still sees all of it. Applies going forward only — never restructure an existing Solution's recorded fields to add this.
 9. Re-read the Opportunity/Solution and report the resulting **Backlog** item, state, priority boost, and Living Document reference.
 
 ## Guardrails
